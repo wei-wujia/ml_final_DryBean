@@ -1,0 +1,109 @@
+# ==================================================
+# 机器学习算法对比实验 默认配置文件
+# 所有超参数、路径、实验参数统一在此管理
+# ==================================================
+
+# ------------------------------
+# 全局基础配置
+# ------------------------------
+global:
+  random_state: 42        # 全局随机种子，保证实验可复现
+  task_type: classification  # 任务类型：分类/回归
+  use_validation: true    # 是否启用验证集
+
+# ------------------------------
+# 路径配置
+# ------------------------------
+paths:
+  data_dir: ./DryBeanDataset      # 原始数据存放目录
+  model_save_dir: ./saved_models  # 训练好的模型保存目录
+  result_save_dir: ./results      # 评估结果表格保存目录
+  plot_save_dir: ./results/plots  # 可视化图表保存目录
+
+# ------------------------------
+# 数据预处理配置
+# ------------------------------
+data:
+  test_size: 0.2          # 测试集占总数据比例
+  val_size: 0.1           # 验证集占训练集比例
+  standardize: true       # 是否对特征做标准化
+  shuffle: true           # 划分数据时是否打乱
+
+# ------------------------------
+# 各算法超参数配置
+# 与 algorithms/ 下各实现类参数一一对应
+# ------------------------------
+algorithms:
+  # 逻辑回归
+  logistic_regression:
+    penalty: l2
+    C: 1.0
+    max_iter: 100
+    solver: lbfgs
+    multi_class: auto
+    n_jobs: -1
+
+  # SVM（默认RBF核）
+  svm:
+    kernel: rbf
+    C: 1.0
+    gamma: scale
+    degree: 3
+    coef0: 0.0
+    probability: true
+
+  # K近邻
+  knn:
+    n_neighbors: 5
+    weights: uniform
+    metric: minkowski
+    p: 2
+    n_jobs: -1
+
+  # 全连接神经网络
+  ann:
+    hidden_layer_sizes: [64, 32]
+    activation: relu
+    solver: adam
+    alpha: 0.0001
+    learning_rate_init: 0.001
+    max_iter: 200
+    batch_size: auto
+    early_stopping: false
+    validation_fraction: 0.1
+
+  # XGBoost（课外拓展算法）
+  xgboost:
+    n_estimators: 100
+    max_depth: 6
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_alpha: 0.0
+    reg_lambda: 1.0
+    eval_metric: mlogloss
+    objective: multi:softprob # 新增：显式指定多分类概率输出模式
+    num_class: 7             # 新增：固定数据集类别数为7
+    n_jobs: -1
+
+# ------------------------------
+# 评估模块配置
+# ------------------------------
+evaluation:
+  measure_inference_speed: true   # 是否测试推理速度
+  speed_test_runs: 10             # 速度测试重复次数
+  enable_overfitting_analysis: true  # 是否开启过拟合分析
+  enable_noise_robustness: true      # 是否开启噪声鲁棒性分析
+  noise_std_ratios: [0.01, 0.05, 0.1, 0.2]  # 噪声强度梯度
+  main_metric: accuracy           # 核心评估指标
+
+# ------------------------------
+# 可视化配置
+# ------------------------------
+visualization:
+  style: whitegrid        # seaborn 绘图风格
+  dpi: 120                # 图片分辨率
+  figsize_width: 8        # 默认图表宽度
+  figsize_height: 5       # 默认图表高度
+  save_plots: true        # 是否保存图片到本地
+  show_plots: false       # 是否弹窗展示图片

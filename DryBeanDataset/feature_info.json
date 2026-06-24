@@ -1,0 +1,56 @@
+{
+    "final_feature_cols": [
+        "Area",
+        "AspectRation",
+        "Extent",
+        "roundness"
+    ],
+    "label_mapping": {
+        "S3K3R": "SEKER",
+        "D3RMAS0N": "DERMASON",
+        "H0R0Z": "HOROZ",
+        "B0MBAY": "BOMBAY",
+        "dermason": "DERMASON",
+        "sira": "SIRA",
+        "horoz": "HOROZ",
+        "seker": "SEKER",
+        "barbunya": "BARBUNYA",
+        "cali": "CALI",
+        "bombay": "BOMBAY",
+        "DERMASON ": "DERMASON",
+        "SIRA ": "SIRA",
+        "HOROZ ": "HOROZ",
+        "SEKER ": "SEKER",
+        "BARBUNYA ": "BARBUNYA",
+        "CALI ": "CALI",
+        "BOMBAY ": "BOMBAY",
+        "SEKER": "SEKER",
+        "BARBUNYA": "BARBUNYA",
+        "BOMBAY": "BOMBAY",
+        "CALI": "CALI",
+        "DERMASON": "DERMASON",
+        "HOROZ": "HOROZ",
+        "SIRA": "SIRA"
+    },
+    "correct_labels": [
+        "SEKER",
+        "BARBUNYA",
+        "BOMBAY",
+        "CALI",
+        "DERMASON",
+        "HOROZ",
+        "SIRA"
+    ],
+    "scaler_mean": [
+        52879.16486616983,
+        1.5836999385283501,
+        0.7495584106424159,
+        0.8733612363232385
+    ],
+    "scaler_scale": [
+        28414.04468817983,
+        0.2444187206313564,
+        0.04848079074191249,
+        0.058109755635432025
+    ]
+}

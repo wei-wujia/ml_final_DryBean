@@ -1,0 +1,240 @@
+==================================================
+数据集基本信息统计
+==================================================
+训练集样本数: 9527, 特征数: 16
+测试集样本数: 2737, 特征数: 16
+验证集样本数: 1347, 特征数: 16
+
+特征列表: ['Area', 'Perimeter', 'MajorAxisLength', 'MinorAxisLength', 'AspectRation', 'Eccentricity', 'ConvexArea', 'EquivDiameter', 'Extent', 'roundness', 'ShapeFactor1', 'ShapeFactor2', 'ShapeFactor3', 'ShapeFactor4']
+
+数据类型分布:
+float64    12
+object      3
+int64       2
+Name: count, dtype: int64
+
+==================================================
+缺失值分析
+==================================================
+训练集缺失值统计:
+Perimeter    469
+Solidity     272
+
+训练集总缺失值数: 741
+含缺失值的特征数: 2
+
+==================================================
+标签分布与错误分析
+==================================================
+原始标签分布:
+Class
+DERMASON     2365
+SIRA         1781
+SEKER        1343
+HOROZ        1270
+CALI         1120
+BARBUNYA      898
+BOMBAY        344
+dermason       61
+D3RMAS0N       56
+sira           37
+horoz          32
+seker          28
+S3K3R          24
+H0R0Z          24
+DERMASON       21
+SIRA           19
+barbunya       18
+cali           16
+CALI           15
+HOROZ          14
+SEKER          13
+B0MBAY         12
+BARBUNYA       11
+bombay          4
+BOMBAY          1
+
+检测到的错误标签: ['dermason', 'D3RMAS0N', 'sira', 'horoz', 'seker', 'S3K3R', 'H0R0Z', 'DERMASON ', 'SIRA ', 'barbunya', 'cali', 'CALI ', 'HOROZ ', 'SEKER ', 'B0MBAY', 'BARBUNYA ', 'bombay', 'BOMBAY ']
+
+修正标签后分布:
+Class
+SEKER       1408
+BARBUNYA     927
+BOMBAY       349
+CALI        1151
+DERMASON    2503
+HOROZ       1340
+SIRA        1837
+
+类别不平衡比例: 7.17:1 (最多/最少)
+
+==================================================
+数值特征统计与异常值分析
+==================================================
+数值特征统计描述已保存到 ./figures/numeric_features_stats.csv
+
+异常值统计已保存到 ./figures/outlier_stats.csv
+异常值比例最高的特征: Eccentricity (6.21%)
+
+==================================================
+特征相关性分析
+==================================================
+高度相关特征对(|r|>0.9):
+Perimeter ↔ Area: 0.967
+MinorAxisLength ↔ Area: 0.952
+MinorAxisLength ↔ Perimeter: 0.914
+Eccentricity ↔ AspectRation: 0.925
+ConvexArea ↔ Area: 1.000
+ConvexArea ↔ Perimeter: 0.968
+ConvexArea ↔ MinorAxisLength: 0.951
+EquivDiameter ↔ Area: 0.985
+EquivDiameter ↔ Perimeter: 0.991
+EquivDiameter ↔ MinorAxisLength: 0.949
+已转换为数值类型的特征: ['Area', 'Perimeter', 'MajorAxisLength', 'MinorAxisLength', 'AspectRation', 'Eccentricity', 'ConvexArea', 'EquivDiameter', 'Extent', 'Solidity', 'roundness', 'Compactness', 'ShapeFactor1', 'ShapeFactor2', 'ShapeFactor3', 'ShapeFactor4']
+
+==================================================
+数据集基本信息统计
+==================================================
+训练集样本数: 9527, 特征数: 16
+测试集样本数: 2737, 特征数: 16
+验证集样本数: 1347, 特征数: 16
+
+数据类型分布:
+float64    14
+int64       2
+object      1
+Name: count, dtype: int64
+
+==================================================
+缺失值分析
+==================================================
+训练集缺失值统计:
+Perimeter    469
+Solidity     474
+
+训练集总缺失值数: 943
+含缺失值的特征数: 2
+
+==================================================
+标签分布与错误分析
+==================================================
+原始标签分布:
+Class
+DERMASON     2365
+SIRA         1781
+SEKER        1343
+HOROZ        1270
+CALI         1120
+BARBUNYA      898
+BOMBAY        344
+dermason       61
+D3RMAS0N       56
+sira           37
+horoz          32
+seker          28
+S3K3R          24
+H0R0Z          24
+DERMASON       21
+SIRA           19
+barbunya       18
+cali           16
+CALI           15
+HOROZ          14
+SEKER          13
+B0MBAY         12
+BARBUNYA       11
+bombay          4
+BOMBAY          1
+
+检测到的错误标签: ['dermason', 'D3RMAS0N', 'sira', 'horoz', 'seker', 'S3K3R', 'H0R0Z', 'DERMASON ', 'SIRA ', 'barbunya', 'cali', 'CALI ', 'HOROZ ', 'SEKER ', 'B0MBAY', 'BARBUNYA ', 'bombay', 'BOMBAY ']
+
+修正标签后分布:
+Class
+SEKER       1408
+BARBUNYA     927
+BOMBAY       349
+CALI        1151
+DERMASON    2503
+HOROZ       1340
+SIRA        1837
+
+类别不平衡比例: 7.17:1 (最多/最少)
+
+==================================================
+数值特征统计与异常值分析
+==================================================
+数值特征统计描述已保存到 ./figures/numeric_features_stats.csv
+
+异常值统计已保存到 ./figures/outlier_stats.csv
+异常值比例最高的特征: Eccentricity (6.21%)
+
+==================================================
+特征相关性分析
+==================================================
+高度相关特征对(|r|>0.9):
+Perimeter ↔ Area: 0.967
+MinorAxisLength ↔ Area: 0.952
+MinorAxisLength ↔ Perimeter: 0.914
+Eccentricity ↔ AspectRation: 0.925
+ConvexArea ↔ Area: 1.000
+ConvexArea ↔ Perimeter: 0.968
+ConvexArea ↔ MinorAxisLength: 0.951
+EquivDiameter ↔ Area: 0.985
+EquivDiameter ↔ Perimeter: 0.991
+EquivDiameter ↔ MinorAxisLength: 0.949
+EquivDiameter ↔ ConvexArea: 0.985
+Compactness ↔ AspectRation: -0.988
+Compactness ↔ Eccentricity: -0.971
+ShapeFactor1 ↔ MinorAxisLength: -0.948
+ShapeFactor3 ↔ AspectRation: -0.979
+ShapeFactor3 ↔ Eccentricity: -0.981
+ShapeFactor3 ↔ Compactness: 0.999
+
+==================================================
+特征分布分析
+==================================================
+
+Compactness特征统计信息（已转换为数值）:
+count    9527.000000
+mean        0.799660
+std         0.061615
+min         0.645368
+25%         0.761968
+50%         0.801120
+75%         0.833788
+max         0.987303
+Name: Compactness, dtype: float64
+
+==================================================
+数据污染综合总结
+==================================================
+
+1. 缺失值问题:
+   - 训练集共943个缺失值，分布在2个特征中
+   - 缺失值比例最高的特征: Solidity (4.98%)
+
+2. 标签错误问题:
+   - 检测到18个错误标签，主要是字符替换错误（如S3K3R→SEKER）
+   - 修正后所有样本归为7个标准类别
+
+3. 异常值问题:
+   - 共检测到4903个异常值，涉及15个特征
+   - 异常值比例最高的特征: Eccentricity (6.21%)
+   - 异常值主要集中在形状因子类特征
+
+4. 类别不平衡问题:
+   - 样本量最多: DERMASON (2503个)
+   - 样本量最少: BOMBAY (349个)
+   - 不平衡比例: 7.17:1
+
+5. 特征相关性问题:
+   - 共发现17对高度相关特征(|r|>0.9)
+   - 最相关特征: Perimeter与Area (r=0.967)
+
+6. 特征分布问题:
+   - 大部分特征呈现右偏分布
+   - 不同类别在形状特征上有明显区分度
+   - 已修复带单位的数值特征（如Compactness）的类型问题
+
+
+数据分析完成！所有图表和统计文件已保存到 ./figures 文件夹
