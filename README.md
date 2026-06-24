@@ -27,10 +27,12 @@
 ## 二、项目工程架构
 项目采用模块化工程架构，各模块职责分离，支持命令行一键运行，无UI界面。整体目录结构如下：
 
-```
+'''
 ml_final_DryBean/
+├── figures/                # 数据分析阶段原始图表
+├── figures_processed/      # 预处理后可视化图表
 ├── configs/                # 超参数配置文件（YAML格式）
-├── data_utils/             # 数据处理模块
+├── data_utils/             # 数据工具模块
 │   ├── loader.py           # 数据集加载与划分
 │   ├── preprocess.py       # 数据标准化与标签编码
 │   └── noise.py            # 噪声注入工具（鲁棒性测试）
@@ -45,12 +47,14 @@ ml_final_DryBean/
 │   ├── metrics.py          # 分类指标计算
 │   ├── analyzer.py         # 过拟合/鲁棒性深度分析
 │   └── plotter.py          # 实验结果可视化绘图
-├── DryBeanDataset/         # 原始与清洗后数据集
-├── saved_models/           # 训练好的模型持久化文件
-├── results/                # 实验结果输出（图表、CSV报告）
+├── DryBeanDataset/         # 原始数据集与清洗后数据集
+├── saved_models/           # 训练完成的模型持久化文件
+├── results/                # 实验结果输出（指标表、分析报告、可视化图表）
+├── data_analysis.py        # 数据分析脚本：缺失值、异常值、相关性、分布统计
+├── data_processing.py      # 数据预处理脚本：清洗、特征工程、数据集生成
 ├── requirements.txt        # 项目依赖清单
-└── main.py                 # 项目主入口（命令行调用）
-```
+└── main.py                 # 算法对比实验主入口（命令行调用）
+'''
 
 ## 三、实现算法
 项目共实现5种多分类算法，覆盖线性分类、核方法、惰性学习、深度学习、集成学习五大范式，其中XGBoost为课程内容之外自主查阅资料实现的拓展算法。
